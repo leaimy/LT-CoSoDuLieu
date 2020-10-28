@@ -49,6 +49,9 @@ namespace Lab03_New.Logic
 		/// <param name="sv">Sinh viên cần xóa</param>
 		public void Xoa(SinhVien sv)
 		{
+			if (sv is null)
+				throw new Exception("Sinh viên không hợp lệ.");
+
 			bool isExist = false;
 			int index = 0;
 			for (int i = 0; i < DanhSach.Count; i++)
@@ -74,6 +77,9 @@ namespace Lab03_New.Logic
 		/// <returns>Trả về sinh viên hoặc null nếu không tìm thấy</returns>
 		public SinhVien TimTheoMaSo(string maSoSV)
 		{
+			if (maSoSV is null)
+				throw new Exception("Mã số sinh viên không hợp lệ.");
+
 			SinhVien sv = null;
 
 			for (int i = 0; i < DanhSach.Count; i++)
@@ -93,8 +99,14 @@ namespace Lab03_New.Logic
 		/// <param name="sinhVienMoi">Thông tin mới của sinh viên để cập nhật</param>
 		public void SuaThongTinSinhVienTheoMaSo(string maSoSV, SinhVien sinhVienMoi)
 		{
+			if (maSoSV is null)
+				throw new Exception("Mã số sinh viên không hợp lệ.");
+
+			if (sinhVienMoi is null)
+				throw new Exception("Sinh viên không hợp lệ.");
+
 			if (maSoSV != sinhVienMoi.MaSo)
-				throw new Exception("2 sinh viên có mã không giống nhau. Không thể cập nhật!");
+				throw new Exception("2 sinh viên có mã không giống nhau. Không thể cập nhật.");
 
 			bool isExist = false;
 			int index = 0;
