@@ -5,7 +5,11 @@ VisualStudioVersion = 16.0.30503.244
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab03_New.Winform", "Lab03_New.Winform\Lab03_New.Winform.csproj", "{AC95F82D-DA17-4C05-ACA3-31C265D8D5AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab03_New.Logic", "Lab03_New.Logic\Lab03_New.Logic.csproj", "{6363D631-107D-4EC1-8A83-3575542F2DC6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab03_New.Logic", "Lab03_New.Logic\Lab03_New.Logic.csproj", "{6363D631-107D-4EC1-8A83-3575542F2DC6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{87ED400E-12D0-4718-A214-ED1DE407CCDA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab03_New.Logic.Tests", "Tests\Lab03_New.Logic.Tests\Lab03_New.Logic.Tests.csproj", "{7F99A245-EB07-43E3-9C08-FF1D71F0452A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,9 +25,16 @@ Global
 		{6363D631-107D-4EC1-8A83-3575542F2DC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6363D631-107D-4EC1-8A83-3575542F2DC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6363D631-107D-4EC1-8A83-3575542F2DC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F99A245-EB07-43E3-9C08-FF1D71F0452A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F99A245-EB07-43E3-9C08-FF1D71F0452A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F99A245-EB07-43E3-9C08-FF1D71F0452A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F99A245-EB07-43E3-9C08-FF1D71F0452A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7F99A245-EB07-43E3-9C08-FF1D71F0452A} = {87ED400E-12D0-4718-A214-ED1DE407CCDA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3D42C8A1-39AD-4F41-8BC5-DA1A04B968D4}

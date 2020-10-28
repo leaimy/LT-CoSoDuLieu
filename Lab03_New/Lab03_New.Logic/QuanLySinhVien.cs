@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace Lab03_New.Logic
 {
@@ -23,6 +24,9 @@ namespace Lab03_New.Logic
 		/// <param name="sv">Sinh viên cần thêm</param>
 		public void Them(SinhVien sv)
 		{
+			if (sv is null)
+				throw new Exception("Sinh viên không hợp lệ.");
+
 			bool isExist = false;
 			for (int i = 0; i < DanhSach.Count; i++)
 			{
