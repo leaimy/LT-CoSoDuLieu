@@ -89,5 +89,22 @@ namespace Lab03_New.Winform
                 MessageBox.Show(exception.Message, "Lỗi thêm sinh viên", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnMacDinh_Click(object sender, EventArgs e)
+        {
+            mtxtMaSo.Text = "";
+            txtHoTen.Text = "";
+            dtpNgaySinh.Value = DateTime.Now;
+            txtDiaChi.Text = "";
+            cboLop.Text = cboLop.Items[0].ToString();
+            txtHinh.Text = "";
+            pbHinh.ImageLocation = "";
+            rdNam.Checked = true;
+            for (int i = 0; i < clbChuyenNganh.Items.Count-1; i++)
+            {
+                clbChuyenNganh.SetItemChecked(i, false);
+            }
+
+        }
     }
 }

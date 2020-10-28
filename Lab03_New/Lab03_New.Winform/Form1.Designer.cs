@@ -192,6 +192,7 @@
             this.btnMacDinh.TabIndex = 22;
             this.btnMacDinh.Text = "Mặc Định";
             this.btnMacDinh.UseVisualStyleBackColor = false;
+            this.btnMacDinh.Click += new System.EventHandler(this.btnMacDinh_Click);
             // 
             // btnSua
             // 
