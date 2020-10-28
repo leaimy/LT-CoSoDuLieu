@@ -62,5 +62,52 @@ namespace Lab03_New.Logic
 
 			DanhSach.RemoveAt(index);
 		}
+
+		/// <summary>
+		/// Tìm kiếm sinh viên theo mã số
+		/// </summary>
+		/// <param name="maSoSV">Mã số của sinh viên cần tìm</param>
+		/// <returns>Trả về sinh viên hoặc null nếu không tìm thấy</returns>
+		public SinhVien TimTheoMaSo(string maSoSV)
+		{
+			SinhVien sv = null;
+
+			for (int i = 0; i < DanhSach.Count; i++)
+				if (DanhSach[i].MaSo == maSoSV)
+				{
+					sv = DanhSach[i];
+					break;
+				}
+
+			return sv;
+		}
+
+		/// <summary>
+		/// Cập nhật thông tin sinh viên trong danh sách
+		/// </summary>
+		/// <param name="maSoSV">Mã số của sinh viên cần cập nhật thông tin</param>
+		/// <param name="sinhVienMoi">Thông tin mới của sinh viên để cập nhật</param>
+		public void SuaThongTinSinhVienTheoMaSo(string maSoSV, SinhVien sinhVienMoi)
+		{
+			if (maSoSV != sinhVienMoi.MaSo)
+				throw new Exception("2 sinh viên có mã không giống nhau. Không thể cập nhật!");
+
+			bool isExist = false;
+			int index = 0;
+			for (int i = 0; i < DanhSach.Count; i++)
+			{
+				if (DanhSach[i].MaSo == maSoSV)
+				{
+					isExist = true;
+					index = i;
+					break;
+				}
+			}
+
+			if (isExist == false)
+				throw new Exception($"Sinh viên có mã số {maSoSV} không tồn tại trong danh sách.");
+
+			DanhSach[index] = sinhVienMoi;
+		}
 	}
 }
