@@ -10,7 +10,19 @@ namespace Lab03_New.Logic
 			chuyenNganh = new List<string>();
 		}
 
-		private string maSo;
+        public SinhVien(string maSo, string hoTen, DateTime ngaySinh, string diaChi, string lop, string hinh, bool gioiTinh, List<string> chuyenNganh)
+        {
+            MaSo = maSo;
+            HoTen = hoTen;
+            NgaySinh = ngaySinh;
+            DiaChi = diaChi;
+            Lop = lop;
+            Hinh = hinh;
+            GioiTinh = gioiTinh;
+            ChuyenNganh = chuyenNganh;
+        }
+
+        private string maSo;
 
 		public string MaSo
 		{
@@ -73,5 +85,7 @@ namespace Lab03_New.Logic
 			get { return chuyenNganh; }
 			set { chuyenNganh = value; }
 		}
+
+		
 	}
 }
