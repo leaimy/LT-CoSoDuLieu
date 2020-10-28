@@ -109,5 +109,14 @@ namespace Lab03_New.Logic
 
 			DanhSach[index] = sinhVienMoi;
 		}
+
+		/// <summary>
+		/// Đọc danh sách sinh viên từ tập tin
+		/// </summary>
+		public void DocTuFile()
+		{
+			var quanLySinhVienRepo = new QuanLySinhVienRepository();
+			DanhSach = quanLySinhVienRepo.DocTuFile();
+		}
 	}
 }
