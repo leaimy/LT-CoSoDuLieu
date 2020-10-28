@@ -92,6 +92,7 @@ namespace Lab03_New.Winform
 
         private void btnMacDinh_Click(object sender, EventArgs e)
         {
+            //
             mtxtMaSo.Text = "";
             txtHoTen.Text = "";
             dtpNgaySinh.Value = DateTime.Now;
